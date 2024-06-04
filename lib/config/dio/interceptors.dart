@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:non_attending/config/dio/app_logger.dart';
-import 'package:non_attending/config/keys/app_urls.dart';
-import 'package:non_attending/config/keys/headers.dart';
-import 'package:non_attending/config/keys/pref_keys.dart';
+import 'package:hospitall/config/dio/app_logger.dart';
+import 'package:hospitall/config/keys/app_urls.dart';
+import 'package:hospitall/config/keys/headers.dart';
+import 'package:hospitall/config/keys/pref_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:req_fun/req_fun.dart';
 
