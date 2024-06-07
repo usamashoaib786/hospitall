@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hospitall/Utils/resources/app_text.dart';
 import 'package:hospitall/Utils/resources/app_theme.dart';
 
-
 class AppButton {
   static Widget appButton(String text,
       {double? height,
@@ -32,18 +31,7 @@ class AppButton {
         width: width,
         height: height,
         decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-                color: Color.fromARGB(255, 145, 158, 222), blurRadius: 2, offset: Offset(2, 4))
-          ],
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromARGB(255, 219, 175, 71), // 43%
-              Color.fromARGB(255, 223, 214, 192), // 7.74%
-            ],
-          ),
+          color: AppTheme.appColor,
           borderRadius: BorderRadius.circular(radius ?? 10),
         ),
         child: AppText.appText(text,

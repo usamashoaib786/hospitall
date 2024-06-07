@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:non_attending/View/Cart%20Screens/cart_provider.dart';
-import 'package:non_attending/config/Apis%20Manager/apis_provider.dart';
-import 'package:non_attending/splash_screen.dart';
-import 'package:provider/provider.dart';
+import 'package:hospitall/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,17 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<ApiProvider>(create: (_) => ApiProvider()),
-        ChangeNotifierProvider<Cart>(create: (_) => Cart()),
-      ],
-      child: MaterialApp(
+    return 
+       MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Non Attending',
         theme: ThemeData(),
         home: const SplashScreen(),
-      ),
+    
     );
   }
 }

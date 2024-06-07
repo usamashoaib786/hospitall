@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:non_attending/Utils/utils.dart';
-import 'package:non_attending/View/bottomNavBar/bottom_bar.dart';
+import 'package:hospitall/Utils/utils.dart';
+import 'package:hospitall/View/Authentication/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,11 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 2), () {
-      pushReplacement(context,  BottomNavView());
+      pushReplacement(context, const SignInScreen());
     });
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: Image.asset(
-          "assets/images/bgimage.png",
-          fit: BoxFit.fill,
+        child: Center(
+          child: Image.asset(
+            "assets/images/Logo.png",
+            height: 200,
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     );

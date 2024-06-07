@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:non_attending/Utils/resources/app_theme.dart';
+import 'package:hospitall/Utils/resources/app_theme.dart';
 
 class CustomAppFormField extends StatefulWidget {
   final double? height;
@@ -79,47 +79,34 @@ class _CustomAppFormFieldState extends State<CustomAppFormField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: widget.height ?? 45,
+      height: widget.height ?? 64,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-          border: Border.all(color: const Color(0xff2042F3)),
-          color: AppTheme.white,
-          borderRadius: BorderRadius.circular(8)),
+          border: Border.all(color: AppTheme.appColor),
+          color: const Color(0xffF1F4FF),
+          borderRadius: BorderRadius.circular(10)),
       child: TextField(
         maxLines: widget.lines ?? 1,
         readOnly: widget.readOnly ?? false,
         controller: widget.controller,
-        cursorColor: AppTheme.white,
-        cursorHeight: 20,
-        textAlign: TextAlign.center,
+        cursorColor: AppTheme.appColor,
+        cursorHeight: 25,
+        textAlign: TextAlign.start,
         cursorWidth: 2,
         keyboardType: TextInputType.name,
         decoration: InputDecoration(
-            prefixIcon: widget.prefixIcon == true
-                ? null
-                : Container(
-                    width: 50,
-                    decoration: BoxDecoration(
-                        border: Border(
-                            right: BorderSide(color: AppTheme.blackColor))),
-                    child: Center(
-                      child: Image.asset(
-                        "${widget.prefixImge}",
-                        height: 21,
-                      ),
-                    ),
-                  ),
             prefixIconConstraints: const BoxConstraints(
               minWidth: 50,
             ),
             border: InputBorder.none,
-            contentPadding: const EdgeInsets.all(8),
+            contentPadding:
+                const EdgeInsets.only(left: 20, top: 16, bottom: 8, right: 8),
             hintText: widget.texthint,
             hintStyle: TextStyle(
-                color: AppTheme.blackColor,
-                fontSize: 19,
-                fontWeight: FontWeight.w200),
-            isDense: true),
+                color: AppTheme.lightText,
+                fontSize: 16,
+                fontWeight: FontWeight.w500),
+            isDense: false),
       ),
     );
   }
@@ -201,44 +188,33 @@ class _CustomAppPasswordfieldState extends State<CustomAppPasswordfield> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 45,
+        height: widget.height ?? 64,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            border: Border.all(color: const Color(0xff2042F3)),
-            color: AppTheme.white,
-            borderRadius: BorderRadius.circular(8)),
+            border: Border.all(color: AppTheme.appColor),
+            color: const Color(0xffF1F4FF),
+            borderRadius: BorderRadius.circular(10)),
         child: TextFormField(
           controller: widget.controller,
-          cursorColor: AppTheme.white,
-          cursorHeight: 20,
-          textAlign: TextAlign.center,
+          cursorColor: AppTheme.appColor,
+          cursorHeight: 25,
+          textAlign: TextAlign.start,
           cursorWidth: 2,
           keyboardType: TextInputType.name,
           obscureText: _obscureText,
           decoration: InputDecoration(
-              prefixIcon: Container(
-                width: 50,
-                decoration: BoxDecoration(
-                    border:
-                        Border(right: BorderSide(color: AppTheme.blackColor))),
-                child: Center(
-                  child: Image.asset(
-                    "${widget.prefixImge}",
-                    height: 21,
-                  ),
-                ),
-              ),
               prefixIconConstraints: const BoxConstraints(
                 minWidth: 50,
               ),
               border: InputBorder.none,
-              contentPadding: const EdgeInsets.all(8),
+              contentPadding:
+                  const EdgeInsets.only(left: 20, top: 16, bottom: 8, right: 8),
               hintText: widget.texthint,
               hintStyle: TextStyle(
-                  color: AppTheme.blackColor,
-                  fontSize: 19,
-                  fontWeight: FontWeight.w200),
-              isDense: true,
+                  color: AppTheme.lightText,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500),
+              isDense: false,
               suffixIcon: InkWell(
                 onTap: () {
                   setState(() {
@@ -246,12 +222,14 @@ class _CustomAppPasswordfieldState extends State<CustomAppPasswordfield> {
                   });
                 },
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(
+                    top: 15,
+                  ),
                   child: Icon(
                     _obscureText
                         ? Icons.visibility_off_outlined
                         : Icons.visibility_outlined,
-                    color: AppTheme.blue,
+                    color: AppTheme.appColor,
                   ),
                 ),
               )),

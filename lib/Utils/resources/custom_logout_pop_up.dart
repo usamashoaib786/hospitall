@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:non_attending/Utils/resources/app_theme.dart';
+import 'package:hospitall/Utils/resources/app_theme.dart';
 
 
 showLogOutALert(BuildContext context, {controller}) {
