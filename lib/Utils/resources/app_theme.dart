@@ -6,6 +6,8 @@ class AppTheme {
   static Color appColor = const Color(0xff39803D);
   static Color blackColor = const Color(0xff000000);
   static Color lightText = const Color(0xff626262);
+         static Color lightAppColor =                 const Color.fromARGB(255, 142, 169, 144);
+  static Color lightText1 = const Color(0xff858585);
   static Color white = Colors.white;
   static Color whiteColor = Colors.white;
 

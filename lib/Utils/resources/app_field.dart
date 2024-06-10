@@ -21,8 +21,8 @@ class CustomAppFormField extends StatefulWidget {
   final TextAlign textAlign;
   final Widget? prefix;
   final Widget? suffix;
-  final bool? prefixIcon;
-  final bool? suffixIcon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final Color? prefixIconColor;
   final Color? suffixIconColor;
   final Color? cursorColor;
@@ -62,7 +62,7 @@ class CustomAppFormField extends StatefulWidget {
     this.fontsize,
     this.hintStyle,
     this.errorText,
-    this.style,
+    this.style,    
     this.errorStyle,
     this.errorBorder,
     this.focusedErrorBorder,
@@ -95,6 +95,8 @@ class _CustomAppFormFieldState extends State<CustomAppFormField> {
         cursorWidth: 2,
         keyboardType: TextInputType.name,
         decoration: InputDecoration(
+          prefixIcon: widget.prefixIcon,
+          suffixIcon: widget.suffixIcon,
             prefixIconConstraints: const BoxConstraints(
               minWidth: 50,
             ),

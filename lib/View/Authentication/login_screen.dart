@@ -69,7 +69,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 30,
                   ),
                   AppButton.appButton("Login", onTap: () {
-                    push(context, const BottomNavView());
+                    push(context, const OnBoardScreen());
                   },
                       height: 60,
                       textColor: AppTheme.whiteColor,

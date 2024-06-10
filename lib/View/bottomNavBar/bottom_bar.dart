@@ -13,7 +13,7 @@ class BottomNavView extends StatefulWidget {
 }
 
 class _BottomNavViewState extends State<BottomNavView> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
 
   List screen = [
     const HomeScreen(),
